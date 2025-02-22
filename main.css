@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #05adc3;
+  --color-background: #efefef;
+  --max-width: 1440px;
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+}
+
+.content-root {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  max-width: var(--max-width);
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Helvetika', sans-serif;
+  color: #000000;
+}
+
+/*---Конец глобальных стилекей---*/
+/*---header---*/
+.header {
+  display: flex;
+  border-bottom: 3px solid #000;
+  justify-content: space-between;
+}
+
+.logo a {
+  font-size: 48px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+.logo a:hover {
+  color: #8a8a8a;
+}
+
+.logo img {
+  vertical-align: middle;
+}
+
+.version {
+  font-size: 48px;
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-right: 10px;
+}
+
+.version img {
+  width: 50px;
+  vertical-align: middle;
+}
+
+/*---Mein content---*/
+.main {
+  flex-grow: 1;
+  background: var(--color-background);
+  padding: 150px 50px;
+}
+
+.first {
+  position: relative;
+  padding: 60px;
+  display: flex;
+  gap: 13px;
+  background: var(--color-primary);
+  margin-bottom: 300px;
+  text-decoration: none;
+}
+
+.first:hover {
+  background-color: #14b7cc;
+}
+
+.first-subtitle {
+  font-size: 20px;
+  color: #ffffff;
+  font-family: 'Helvetika', sans-serif;
+}
+
+.first-title {
+  font-size: 60px;
+  color: #a7fff3;
+}
+
+.first-img-container {
+  position: relative;
+  width: 31%;
+  padding-top: 31%;
+}
+
+.first-img-container img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*---Карты---*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 24px;
+}
+
+.card {
+  background: var(--color-primary);
+  display: flex;
+  width: calc(50% - 12px);
+  padding: 25px 15px;
+  text-decoration: none;
+}
+
+.card:hover {
+  background-color: #14b7cc;
+}
+
+.card-text {
+  flex-grow: 1;
+  font-size: 35px;
+  text-align: right;
+  color: #e8ffe8;
+  padding-right: 10px;
+}
+
+.card-img {
+  position: relative;
+  width: 60%;
+  max-width: 260px;
+  padding-top: 40%;
+}
+
+.card-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*---footer---*/
+.footer {
+  display: flex;
+  background: var(--color-primary);
+}
+
+.footer-content {
+  vertical-align: middle;
+  display: flex;
+  font-size: 48px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.footer-content img {
+  padding-top: 20px;
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
+.footer-text {
+  padding-top: 25px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+  }
+}
